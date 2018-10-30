@@ -76,7 +76,7 @@ class s3scanner(object):
         if bucket_exists:
             region_name = self.find_region(bucket_name)
             if (region != None) and (region_name != region):
-                self.log.info("[!] {} seems to be at region '{}' not '{}'.".format(bucket_name, region_name, region))
+                self.log.info("[!] {} seems to be located at region '{}' not '{}'.".format(bucket_name, region_name, region))
             elif region_name == None:
                 self.log.info("[!] Could not determine the region for bucket '{}'.".format(bucket_name))
                 return (bucket_name, True, "????", "????", "????")
